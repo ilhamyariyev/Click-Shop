@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".presentation.ui.account.AccountFragment">
+
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="411dp"
+        android:layout_height="1dp"
+        android:background="#EBF0FF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0" />
+
+        <TextView
+            android:id="@+id/FavoriteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Account"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline36"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonProfile"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:text="Profile"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        android:fontFamily="@font/poppins_semibold"
+        app:icon="@drawable/user"
+        app:iconSize="26sp"
+        app:iconTintMode="multiply"
+        android:textAlignment="textStart"
+        app:iconPadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view12"
+        app:rippleColor="#EBF0FF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOrder"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Order"
+        android:textAlignment="textStart"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/bag"
+        app:iconPadding="20dp"
+        app:iconSize="26sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProfile"
+        app:rippleColor="#EBF0FF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddress"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Address"
+        android:textAlignment="textStart"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/location"
+        app:iconPadding="20dp"
+        app:iconSize="26sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOrder"
+        app:rippleColor="#EBF0FF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddress2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Payment"
+        android:textAlignment="textStart"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/payment"
+        app:iconPadding="20dp"
+        app:iconSize="26sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddress"
+        app:rippleColor="#EBF0FF" />
+</androidx.constraintlayout.widget.ConstraintLayout>

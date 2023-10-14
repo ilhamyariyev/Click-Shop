@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "26626206923",
+    "project_id": "clickshop-2e26a",
+    "storage_bucket": "clickshop-2e26a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26626206923:android:434dc344d4ab195d8aff4e",
+        "android_client_info": {
+          "package_name": "com.info.clickshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26626206923-6ug8u1jfcf3c6nigta3mhm74a0qn94pr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDByP3i4wv_VPiCQ3yT8gjv32WEBmF3nko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26626206923-6ug8u1jfcf3c6nigta3mhm74a0qn94pr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
