@@ -52,6 +52,7 @@ class CategoryProductsFragment : BaseFragment<FragmentCategoryProductsBinding>(F
 
     private fun getData(category:String) {
         viewModel.getCategoryProduct(category)
+        binding.textViewCategory.text=args.category
     }
 
     private fun setRecyclerView() {
