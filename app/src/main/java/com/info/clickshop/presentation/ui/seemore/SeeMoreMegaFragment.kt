@@ -24,7 +24,6 @@ class SeeMoreMegaFragment : BaseFragment<FragmentSeeMoreMegaBinding>(FragmentSee
     private lateinit var product: Product
     private lateinit var sharedPreferences: SharedPreferences
 
-
     override fun onViewCreateFinish() {
         setRecyclerView()
         saveTimeinSP()

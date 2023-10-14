@@ -20,7 +20,6 @@ class ListCategoryMVVM @Inject constructor(
 
     private val _categories = MutableLiveData<CategoryUiState>()
     val categories: LiveData<CategoryUiState> = _categories
-
     init {
         getCategories()
     }
@@ -31,7 +30,6 @@ class ListCategoryMVVM @Inject constructor(
                 when (it) {
                     is NetworkResponseState.Success -> {
                         _categories.value = it.result?.let { it1 -> CategoryUiState.Success(it1) }
-
                     }
 
                     is NetworkResponseState.Error -> {

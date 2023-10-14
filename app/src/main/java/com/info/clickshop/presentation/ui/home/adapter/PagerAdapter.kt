@@ -37,7 +37,6 @@ class PagerAdapter : RecyclerView.Adapter<PagerAdapter.ProductViewHolder>() {
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val item = differ.currentList[position]
-        Log.e("top5",differ.currentList.size.toString())
         holder.bind(item)
     }
 

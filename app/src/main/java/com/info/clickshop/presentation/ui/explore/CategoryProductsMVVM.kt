@@ -22,7 +22,6 @@ class CategoryProductsMVVM @Inject constructor(
     private val _categoryProduct= MutableLiveData<DummyProductsUiState>()
     val categoryProduct: LiveData<DummyProductsUiState> = _categoryProduct
 
-
     fun getCategoryProduct(category:String) {
         viewModelScope.launch {
             repository.getProductsofCategory(category).collectLatest {
@@ -30,16 +29,12 @@ class CategoryProductsMVVM @Inject constructor(
                     is NetworkResponseState.Success ->{
                         _categoryProduct.value = it.result?.let { it1 -> DummyProductsUiState.Success(it1) }
                     }
-
                     is NetworkResponseState.Error -> {
                         _categoryProduct.value = DummyProductsUiState.Error(it.exception.message.toString())
                     }
-
                     is NetworkResponseState.Loading -> {
                         _categoryProduct.value = DummyProductsUiState.Loading
                     }
-
-
                 }
             }
         }

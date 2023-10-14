@@ -22,8 +22,6 @@ class ListCategoryAdapter() : RecyclerView.Adapter<ListCategoryAdapter.CategoryH
                         categoryCL.setBackgroundColor(Color.parseColor("#EBF0FF"))
                         textView28.setTextColor(Color.parseColor("#40BFFF"))
                     }
-
-
                 }
             }
         }

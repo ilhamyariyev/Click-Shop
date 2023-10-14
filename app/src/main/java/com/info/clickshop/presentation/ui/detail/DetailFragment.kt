@@ -3,35 +3,27 @@ package com.info.clickshop.presentation.ui.detail
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.info.clickshop.R
+import com.info.clickshop.common.base.BaseFragment
 import com.info.clickshop.common.util.gone
 import com.info.clickshop.common.util.visible
 import com.info.clickshop.databinding.FragmentDetailBinding
+import com.info.clickshop.domain.mapper.Mapper.toProductUiModel
+import com.info.clickshop.domain.model.ProductUiModel
 import com.info.clickshop.domain.state.CommentsUiState
 import com.info.clickshop.domain.state.DummyProductsUiState
 import com.info.clickshop.domain.state.ProductUiState
 import com.info.clickshop.presentation.ui.detail.adapter.AlsoLikeAdapter
+import com.info.clickshop.presentation.ui.detail.adapter.ColorItem
 import com.info.clickshop.presentation.ui.detail.adapter.ColorsAdapter
 import com.info.clickshop.presentation.ui.detail.adapter.CommentAdapter
-import com.info.clickshop.presentation.ui.detail.adapter.SizesAdapter
-import com.info.clickshop.common.base.BaseFragment
-import com.info.clickshop.data.dto.Product
-import com.info.clickshop.data.local.db.cart.CartDTO
-import com.info.clickshop.data.local.db.favorite.FavoriteDTO
-import com.info.clickshop.domain.mapper.Mapper.toCartUiModel
-import com.info.clickshop.domain.mapper.Mapper.toProductUiModel
-import com.info.clickshop.domain.model.CartUiModel
-import com.info.clickshop.domain.model.ProductUiModel
-import com.info.clickshop.domain.state.CartUiState
-import com.info.clickshop.presentation.ui.detail.adapter.ColorItem
 import com.info.clickshop.presentation.ui.detail.adapter.SizeItem
+import com.info.clickshop.presentation.ui.detail.adapter.SizesAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.lang.Exception
 
 @AndroidEntryPoint
 class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding::inflate) {
@@ -42,9 +34,7 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding
     private val commentsAdapter = CommentAdapter()
     private val colorsAdapter = ColorsAdapter()
     private val sizesAdapter = SizesAdapter()
-   // private lateinit var product : Product
     private lateinit var mProduct: ProductUiModel
-   // private lateinit var cProduct: CartUiModel
 
 
     override fun onViewCreateFinish() {
@@ -64,7 +54,6 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding
                         is ProductUiState.Success -> {
                             detail = it.data
                             mProduct=it.data.toProductUiModel()
-                            //cProduct=it.data.toCartUiModel()
                             ratingBar2.rating = it.data.rating.toFloat()
                             ratingBar3.rating = it.data.rating.toFloat()
                             lottiLoading.gone()
@@ -85,19 +74,14 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding
                 alsoLikeProducts.observe(viewLifecycleOwner) {
                     when (it) {
                         is DummyProductsUiState.Success -> {
-                            //lottiLoadingMega.gone()
                             alsoLikeAdapter.differ.submitList(it.data.products)
-
                         }
 
                         is DummyProductsUiState.Error -> {
-                            //lottiLoadingMega.gone()
                             Toast.makeText(context, "Error5", Toast.LENGTH_SHORT).show()
                         }
 
-                        is DummyProductsUiState.Loading -> {
-                            //lottiLoadingMega.visible()
-                        }
+                        is DummyProductsUiState.Loading -> {}
                     }
                 }
 

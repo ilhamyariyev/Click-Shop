@@ -5,15 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.info.clickshop.common.util.NetworkResponseState
-import com.info.clickshop.data.local.db.cart.CartDTO
-import com.info.clickshop.data.local.db.favorite.FavoriteDTO
 import com.info.clickshop.data.repository.ClickShopRepository
 import com.info.clickshop.domain.mapper.Mapper.toCartDTO
 import com.info.clickshop.domain.mapper.Mapper.toFavoriteDTO
-import com.info.clickshop.domain.model.CartUiModel
-import com.info.clickshop.domain.model.FavoriteUiModel
 import com.info.clickshop.domain.model.ProductUiModel
-import com.info.clickshop.domain.state.CartUiState
 import com.info.clickshop.domain.state.CommentsUiState
 import com.info.clickshop.domain.state.DummyProductsUiState
 import com.info.clickshop.domain.state.ProductUiState

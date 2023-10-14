@@ -21,7 +21,6 @@ class CategoryProductsFragment : BaseFragment<FragmentCategoryProductsBinding>(F
     override fun onViewCreateFinish() {
         setRecyclerView()
         getData(args.category)
-
     }
 
     override fun observeEvents() {

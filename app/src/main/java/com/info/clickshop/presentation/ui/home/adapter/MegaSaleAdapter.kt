@@ -23,11 +23,8 @@ class MegaSaleAdapter : RecyclerView.Adapter<MegaSaleAdapter.ProductHolder>() {
                 cardView.setOnClickListener {
                     Navigation.findNavController(it).navigate(HomeFragmentDirections.todetail(item.id.toString()))
                 }
-
             }
-
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductHolder {

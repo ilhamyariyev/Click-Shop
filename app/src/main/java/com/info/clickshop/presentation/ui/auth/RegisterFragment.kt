@@ -17,7 +17,6 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
 
     @Inject
     lateinit var helper: ValidationHelper
-
     private val viewModel: RegisterMVVM by viewModels()
 
     override fun onViewCreateFinish() {

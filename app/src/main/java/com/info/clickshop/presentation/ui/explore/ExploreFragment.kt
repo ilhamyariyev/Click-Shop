@@ -21,7 +21,6 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>(FragmentExploreBind
     private val categoryAdapter = CategoriesAdapter()
     private val searchAdapter = SearchExploreAdapter()
 
-
     override fun onViewCreateFinish() {
         setRecyclerView()
         searchData()

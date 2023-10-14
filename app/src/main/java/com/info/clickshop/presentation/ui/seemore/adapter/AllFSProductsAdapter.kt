@@ -25,9 +25,7 @@ class AllFSProductsAdapter : RecyclerView.Adapter<AllFSProductsAdapter.ProductHo
                     Navigation.findNavController(it).navigate(SeeMoreMegaFragmentDirections.todetail(item.id.toString()))
                 }
             }
-
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductHolder {

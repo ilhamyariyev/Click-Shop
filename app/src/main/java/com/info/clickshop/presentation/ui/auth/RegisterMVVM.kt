@@ -18,6 +18,7 @@ class RegisterMVVM @Inject constructor(
     private val sp: PrefManager,
     private val authRepository:AuthRepository
 ) :ViewModel(){
+
     private val _authResult = MutableLiveData<AuthUiState>()
     val authResult: LiveData<AuthUiState> get() = _authResult
 

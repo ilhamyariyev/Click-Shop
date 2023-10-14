@@ -6,11 +6,9 @@ import com.info.clickshop.common.base.BaseFragment
 
 class ShortByFragment : BaseFragment<FragmentShortByBinding>(FragmentShortByBinding::inflate) {
     override fun onViewCreateFinish() {
-
     }
 
     override fun observeEvents() {
-
     }
 
 }
