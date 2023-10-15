@@ -100,6 +100,9 @@
         <action
             android:id="@+id/tocategoryproduct"
             app:destination="@id/categoryProductsFragment" />
+        <action
+            android:id="@+id/tofavorite"
+            app:destination="@id/favoriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/seeMoreFlashFragment"

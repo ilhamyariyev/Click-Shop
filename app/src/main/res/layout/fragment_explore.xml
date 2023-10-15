@@ -141,28 +141,6 @@
         app:layout_constraintTop_toBottomOf="@+id/view6"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageView
-            android:id="@+id/imageViewCategory2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/baseline_keyboard_arrow_down_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewCategory2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="TextView"
-            android:textColor="@color/dark_blue"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewCategory2"
-            app:layout_constraintEnd_toStartOf="@+id/imageViewCategory2"
-            app:layout_constraintTop_toTopOf="@+id/imageViewCategory2" />
-
         <TextView
             android:id="@+id/textViewResult2"
             android:layout_width="wrap_content"
@@ -242,15 +220,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline24"
         app:layout_constraintTop_toBottomOf="@+id/view6">
 
-        <ImageView
-            android:id="@+id/imageViewCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/baseline_keyboard_arrow_down_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/textViewResult"
             android:layout_width="wrap_content"
@@ -260,19 +229,6 @@
             android:textColor="@color/grey"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="smartphones"
-            android:textColor="@color/dark_blue"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewCategory"
-            app:layout_constraintEnd_toStartOf="@+id/imageViewCategory"
-            app:layout_constraintTop_toTopOf="@+id/imageViewCategory" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSearch"

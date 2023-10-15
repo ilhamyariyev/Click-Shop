@@ -155,8 +155,8 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>(FragmentExploreBind
     }
 
     private fun setButtons(){
-        binding.imageViewCategory.setOnClickListener {
-            findNavController().navigate(ExploreFragmentDirections.tolistcategory())
+        binding.imageViewFavorite.setOnClickListener {
+            findNavController().navigate(ExploreFragmentDirections.tofavorite())
         }
         binding.imageViewShort.setOnClickListener {
             findNavController().navigate(ExploreFragmentDirections.toshortBy())
